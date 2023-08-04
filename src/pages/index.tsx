@@ -2,6 +2,8 @@ import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import { getSession, signIn } from "next-auth/react";
 import { FormEventHandler, useState } from "react";
+import Link from "next/link";
+import Cadastro from "./cadastro";
 
 export default function Home() {
   const { push } = useRouter();
@@ -52,7 +54,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <label htmlFor="password">Senha</label>
             <input
-              type="text"
+              type="password"
               name="password"
               className="p-[10px] bg-slate-900 rounded"
               onChange={InputValue}
@@ -60,7 +62,10 @@ export default function Home() {
           </div>
           <div>
             <p>
-              Não tem conta ? <span>Cadastre-se!</span>
+              Não tem conta?{" "}
+              <Link href="/cadastro">
+                <a>Cadastre-se!</a>
+              </Link>
             </p>
           </div>
           <button
