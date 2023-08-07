@@ -1,12 +1,14 @@
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import { getSession, signIn } from "next-auth/react";
-import { FormEventHandler, useState } from "react";
-import Link from "next/link";
+import { FormEventHandler, useRef, useState } from "react";
 import Cadastro from "./cadastro";
+import { FaRobot } from "react-icons/fa";
+import Robot from "../../public/robot.svg";
 
 export default function Home() {
   const { push } = useRouter();
+  const linkRef = useRef(null);
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -18,7 +20,10 @@ export default function Home() {
       [e.target.name]: e.target.value,
     });
 
-  // 1: VERIFICAR ESSES ATRIBUTO FormEventHandler<HTMLFontElement>
+  const handleLinkClick = () => {
+    push("/cadastro");
+  };
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     const result = await signIn("credentials", {
@@ -34,8 +39,14 @@ export default function Home() {
 
   return (
     <section className="flex items-center justify-center h-[100vh]">
-      <div className="flex flex-col items-center">
-        <h2 className="m-[1rem] font-extrabold text-[30px]">Faça o Login</h2>
+      <div className="max-w-lg w-full bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 rounded-md">
+        <div className="flex justify-center">
+          <FaRobot className="text-4xl" />
+        </div>
+
+        <h2 className="m-[1rem] font-extrabold text-[30px] text-center">
+          Faça o Login
+        </h2>
         <form
           action=""
           autoComplete="off"
@@ -63,14 +74,14 @@ export default function Home() {
           <div>
             <p>
               Não tem conta?{" "}
-              <Link href="/cadastro">
-                <a>Cadastre-se!</a>
-              </Link>
+              <a ref={linkRef} onClick={handleLinkClick}>
+                Cadastre-se!
+              </a>
             </p>
           </div>
           <button
             type="submit"
-            className="bg-green-800 p-[10px] text-gray-50 font-semibold rounded"
+            className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Fazer Login
           </button>
