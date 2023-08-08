@@ -13,7 +13,7 @@ export default function Dashboard() {
 
   return (
     <div className="">
-      <section>
+
         <div>
           <nav className="bg-white border-gray-200 dark:bg-gray-900 h-16">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -154,14 +154,18 @@ export default function Dashboard() {
               </div>
             </div>
           </nav>
-          <MenuBar />
         </div>
-        <div className="flex flex-wrap gap-1 md:gap-1 lg:gap-1">
-          <div className="flex-auto ">
+        <div className="flex w-full ">
+          {/* <div className=" w-full">
+          </div> */}
+            <div className="flex-auto h-full">
+              <MenuBar />
+            </div>
+          <div className="flex w-[100%] justify-around">
             <Cards />
           </div>
         </div>
-      </section>
+      
     </div>
   );
 }

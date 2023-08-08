@@ -3,7 +3,7 @@ import TextArea from "./textarea";
 
 export default function Cards() {
   return (
-    <div className="w-full px-4 md:max-w-sm lg:max-w-md xl:max-w-lg 2xl:max-w-xl mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-9/12 items-center p-4 bg-white border  border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
       <form className="space-y-6" action="#">
         <h5 className="text-xl font-medium text-gray-900 dark:text-white">
           Novo atendimento
@@ -53,7 +53,6 @@ export default function Cards() {
             <TextArea />
             <div className="flex items-center h-5"></div>
           </div>
-          
         </div>
         <button
           type="submit"
