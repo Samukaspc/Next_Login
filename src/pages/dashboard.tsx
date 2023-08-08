@@ -158,7 +158,7 @@ export default function Dashboard() {
         <div className="flex w-full ">
           {/* <div className=" w-full">
           </div> */}
-            <div className="flex-auto h-full">
+            <div className="flex-auto h-full  ">
               <MenuBar />
             </div>
           <div className="flex w-[100%] justify-around">

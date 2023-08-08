@@ -40,7 +40,7 @@ export default function MenuBar() {
       className={`top-16 left-0 h-screen p-4 z-40  overflow-y-auto transition-transform 
             ${
               isDrawerVisible ? "translate-x-0" : "-translate-x-full"
-            } -translate-x-full bg-white w-64 dark:bg-gray-800`}
+            } -translate-x-full bg-white w-64 dark:bg-gray-800 `}
       tabIndex={-1}
       aria-labelledby="drawer-navigation-label"
     >
