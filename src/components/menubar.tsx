@@ -40,16 +40,16 @@ export default function MenuBar() {
       className={`top-16 left-0 h-screen p-4 z-40  overflow-y-auto transition-transform 
             ${
               isDrawerVisible ? "translate-x-0" : "-translate-x-full"
-            } -translate-x-full bg-white w-64 dark:bg-gray-800 `}
+            } -translate-x-full bg-white w-64 dark:bg-green-400  s `}
       tabIndex={-1}
       aria-labelledby="drawer-navigation-label"
     >
-      <h5
+      {/* <h5
         id="drawer-navigation-label"
-        className="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+        className="text-base font-semibold text-gray-500 uppercase dark:text-white"
       >
         Menu
-      </h5>
+      </h5> */}
       {/* <button
             type="button"
             data-drawer-hide="drawer-navigation"
@@ -74,15 +74,15 @@ export default function MenuBar() {
             </svg>
             <span className="sr-only">Close menu</span>
           </button> */}
-      <div className="py-4 overflow-y-auto">
+      <div >
         <ul className="space-y-2 font-medium">
           <li>
             <a
               href="#"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              className="  bg-white flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
-                className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                className="w-5 h-5 text-gray-500 transition duration-75 dark:text-black group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -97,10 +97,10 @@ export default function MenuBar() {
           <li>
             <a
               href="#"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              className=" bg-white flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
-                className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-black group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -114,10 +114,10 @@ export default function MenuBar() {
           <li>
             <a
               href="#"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              className=" bg-white flex items-center p-2 text-gray-900 rounded-lg dark:text-black hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
-                className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-black group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

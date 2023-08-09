@@ -5,6 +5,6 @@
 
 body {
   @apply
-  bg-[#ffffff]
-  text-[#f0f0f0]  
+  bg-[#fff]
+  text-[black]  
 }

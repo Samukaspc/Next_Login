@@ -3,8 +3,10 @@ import { useRouter } from "next/router";
 import { getSession, signIn } from "next-auth/react";
 import { FormEventHandler, useRef, useState } from "react";
 import Cadastro from "./cadastro";
+import { Button } from 'antd';
 import { FaRobot } from "react-icons/fa";
 import Robot from "../../public/robot.svg";
+import Link from "next/link";
 
 export default function Home() {
   const { push } = useRouter();
@@ -38,8 +40,9 @@ export default function Home() {
   };
 
   return (
-    <section className="flex items-center justify-center h-[100vh]">
-      <div className="max-w-lg w-full bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 rounded-md">
+    <section className="flex items-center justify-center h-[100vh] bg-gradient-to-r from-emerald-100 from-10% via-sky-200 via-30% to- to-90%  ">
+      <div className="
+      max-w-lg w-full border-gray-200  shadow sm:p-6 md:p-8 bg-white bg-opacity-100   rounded-md">
         <div className="flex justify-center">
           <FaRobot className="text-4xl" />
         </div>
@@ -58,7 +61,7 @@ export default function Home() {
             <input
               type="text"
               name="email"
-              className="p-[10px] bg-slate-900 rounded"
+              className="p-[10px] border border-black rounded"
               onChange={InputValue}
             />
           </div>
@@ -67,33 +70,35 @@ export default function Home() {
             <input
               type="password"
               name="password"
-              className="p-[10px] bg-slate-900 rounded"
+              className="p-[10px] border-black rounded border "
               onChange={InputValue}
             />
           </div>
-          <div>
+          <div  >
             <p>
               Não tem conta?{" "}
-              <a ref={linkRef} onClick={handleLinkClick}>
+              <a ref={linkRef} onClick={handleLinkClick} style={{ color: '#3db0f7' }}  >
                 Cadastre-se!
               </a>
             </p>
           </div>
-          <button
-            type="submit"
-            className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Fazer Login
-          </button>
-          <fieldset className="border-t border-slate-50 mt-[10px]">
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+            <Link href="/dashboard">
+            <button type="button" style={{ backgroundColor: "blue", width: '150px', padding: '10px', color: 'white', border: 'none', borderRadius: '5px' }}>Login</button>
+          </Link>
+          </div>
+
+
+
+          {/* <fieldset className="border-t border-slate-50 mt-[10px]">
             <legend className="mx-auto px-4 text-white text-1xl italic ">
               ou
             </legend>
             <div className="text-white pt-4">Acesse com o seu:</div>
-          </fieldset>
-          <button
+          </fieldset> */}
+          {/* <button
             type="button"
-            className=" justify-center text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
+            className=" justify-center text-white bg-blue-700 hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
             onClick={() => signIn("github")}
           >
             <svg
@@ -110,7 +115,7 @@ export default function Home() {
               />
             </svg>
             Sign in with Github
-          </button>
+          </button> */}
         </form>
       </div>
     </section>
