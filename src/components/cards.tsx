@@ -121,7 +121,7 @@ export default function Cards() {
 
   return (
     <div className="w-11/12  items-center p-4 bg-white  border-gray-200 sm:p-6 md:p-1 dark:bg-white ">
-        <div className="bg-slate-200 p-5 rounded " >
+        <div className="bg-[#f5f5f5]  mb-5 p-5 rounded " >
           <h5 className="text-xl font-medium text-gray-400 dark:text-black mb-5  " >
             Status Mensagem :
           </h5>
@@ -188,13 +188,13 @@ export default function Cards() {
             </Button>
             <Button style={{ backgroundColor: 'white', boxShadow: '5px 4px 5px gray', width: '200px', height: '70px', marginRight: '10px', fontSize: 20, color: 'blue' }} >
               Total: 600
-            </Button>
+              </Button>
             <Button style={{ backgroundColor: 'white', boxShadow: '5px 4px 5px gray', width: '200px', height: '70px', marginRight: '10px', fontSize: 20, color: 'red' }} >
               Falha: 50
-            </Button>
-          </div> */}
+              </Button>
+            </div> */}
         </div>
-        <div className="bg-slate-200 p-5 rounded  " >
+        <div className="bg-[#f5f5f5] p-5 rounded  mb-5 " >
           <div>
             <div  >
               <div className="w-full flex mb-6 ">
@@ -230,7 +230,7 @@ export default function Cards() {
             </div>
           </div>
         </div>
-        <div className="bg-slate-200 p-5  rounded  " >
+        <div className="bg-[#f5f5f5]  rounded p-5 " >
           <h5 className="text-xl font-medium text-gray-400 dark:text-black mb-5 " >
             Monte sua mensagem
           </h5>
@@ -257,7 +257,7 @@ export default function Cards() {
                 </div>
               ) : (
                 uploadButton
-              )}
+                )}
             </Upload>
           </div>
           <div className="flex w-full justify-center  " >
